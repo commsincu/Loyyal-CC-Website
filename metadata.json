@@ -1,0 +1,6 @@
+{
+  "name": "Loyyal Global Loyalty Network",
+  "description": "An interactive 3D globe showcasing Loyyal's interconnected global loyalty partners including airlines, hospitality, financial issuers, and coalition rewards networks.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

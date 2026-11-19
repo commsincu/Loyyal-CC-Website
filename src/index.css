@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --color-electric-blue: #0066ff;
+  --color-electric-cyan: #00d2ff;
+  --color-electric-glow: #38bdf8;
+  --color-deep-indigo: #0b0f28;
+  --color-indigo-surface: #151b3d;
+  --color-indigo-border: #2a3467;
+}
+
+@layer utilities {
+  .bg-loyyal-gradient {
+    background: linear-gradient(135deg, #00d2ff 0%, #0066ff 50%, #4338ca 100%);
+  }
+  .text-loyyal-gradient {
+    background: linear-gradient(135deg, #00d2ff 0%, #2563eb 50%, #4338ca 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  @keyframes shimmer {
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  .achievements-grid-container {
+    position: relative;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(255, 255, 255, 0.4) 20%,
+      rgba(255, 255, 255, 0.4) 80%,
+      rgba(255, 255, 255, 0.95) 100%
+    );
+  }
+
+  .achievements-grid-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6rem;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  .achievements-grid-container::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3.5rem;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    pointer-events: none;
+    z-index: 10;
+  }
+}
